@@ -50,7 +50,7 @@ import java.lang.Character;
 
 class Main {
     public static void main(String[] args) {
-       String input = "swiss";
+       String input = "Madam";
        Character uniqueChar = input.chars()
        .mapToObj(c->(char)c)
        .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap:: new, Collectors.counting()))
@@ -62,4 +62,3 @@ class Main {
         System.out.println(uniqueChar);
     }
 }
-
