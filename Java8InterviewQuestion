@@ -62,3 +62,19 @@ class Main {
         System.out.println(uniqueChar);
     }
 }
+
+//Use Case 4: Find second highest number in Array
+import java.util.Comparator;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 50, 30, 40};
+        int secondBigNum = Arrays.stream(arr)
+        .boxed()
+        .sorted(Comparator.reverseOrder())
+        .skip(1)
+        .findFirst()
+        .orElseThrow();
+        System.out.println(secondBigNum);
+    }
+}
